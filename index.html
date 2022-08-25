@@ -2,28 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Aperture Studios</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css">
+
 
 </head>
 <body>
+
 	<div class="top-line">
-		<div class="tl-left">
-			<a href="" class="tl-link">
-				<img src="img/IMAGE.svg" class="top_logo" alt="logo">
-			</a>
-		</div>
-		<div class="tl-right">
-			<div class="container">
-				<a href="" class="tl-link" style="padding-right: 56px;">Business areas</a>
-				<a href="" class="tl-link">Featured images</a>
-				<a href="" class="tl-link">Gear cage</a>
-				<a href="" class="tl-link">Contact</a>
-				<button class="top_btn">Get template</button>
+		<div class="top-line-container">
+			<div class="tl-left">
+				<a href="" class="tl-link">
+					<img src="img/IMAGE.svg" class="top_logo" alt="logo">
+				</a>
 			</div>
-		</div>
+			<div class="tl-right">
+				<div class="container">
+					<a href="" class="tl-link" onclick="scrollById('area')" style="padding-right: 56px;">Business areas</a>
+					<a href="" class="tl-link" onclick="scrollById('mountain')">Featured images</a>
+					<a href="" class="tl-link" onclick="scrollById('cage')">Gear cage</a>
+					<a href="" class="tl-link" onclick="scrollById('contact')">Contact</a>
+					<button class="top_btn" >Get template</button>
+				</div>
+			</div>
+
+			<!-- <div class="header_container"> -->
+				<div class="menu_icon" onclick="burgerMenu()">
+					<span></span>
+				</div>
+				<div class="container_mobile">
+					<a href="" class="tl-link" style="margin-right: 56px;">Business areas</a>
+					<a href="" class="tl-link">Featured images</a>
+					<a href="" class="tl-link">Gear cage</a>
+					<a href="" class="tl-link">Contact</a>
+					<button class="top_btn">Get template</button>
+				</div>
+			<!-- </div> -->
+		</div><!-- top-line-container -->
 	</div> <!-- top-line -->
 
 	<div class="wrapper">
@@ -42,10 +62,10 @@
 			</div>
 		</div> <!-- block1 -->
 
-		<div class="block-2">
+		<div class="block-2" id="area">
 			<div class="block-2-head">
 				<p class="L-size" >What we do.</p>
-				<p class="S-size">The areas that we're specialized in.</p>
+				<p class="S-size" style="color: #C0C0C0;">The areas that we're specialized in.</p>
 			</div>
 			<div class="block-2-body">
 				<div class="block-2-square" style="background-image: url(img/Product.jpg) ;">
@@ -83,7 +103,7 @@
 			</div>
 		</div><!--  block2 -->
 
-		<div class="block-3">
+		<div class="block-3" id="mountain">
 			<div class="block-3-text">
 				<p class="text_uppercase">Sunset at Mount Fuji</p>
 				<p class="description_1" style="width: 298px; height: 60px;">Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
@@ -96,7 +116,7 @@
 			</div>
 		</div> <!-- block-3 -->
 
-		<div class="block-4">
+		<div class="block-4" id="cage">
 			<div class="block-4-text">
 				<p class="text_uppercase">The Gear cage</p>
 				<p class="block-4-title">The tools that we use.</p>
@@ -159,10 +179,10 @@
 			</div>
 		</div> <!-- block7 -->
 
-		<div class="block-8">
+		<div class="block-8" id="contact">
 			<div class="block-8-text">
 				<p class="L-size" >Need help with photography or videography?</p>
-				<p class="M-size">We're here for you!</p>
+				<p class="M-size" style="color: #C0C0C0;">We're here for you!</p>
 			</div>
 			<button class="top_btn"	>
 						<img src="img/Frame.svg" alt="">
@@ -173,62 +193,72 @@
 
 
 		<div class="footer">
-			<div class="footer-logo">
-				<img src="img/Aperture-Logotype-Horizontal-White.svg" alt="" style="margin-bottom: 20px;">
-				<p class="XS-size">Photographers & videographers capturing the world around us.</p>
+			<div class="footer-wrapper">
+				<div class="footer-logo-nav">
+					
+					<div class="footer-logo">
+						<img src="img/Aperture-Logotype-Horizontal-White.svg" alt="" style="margin-bottom: 20px;">
+						<p class="XS-size">Photographers & videographers capturing the world around us.</p>
+					</div>
 
-			</div>
+					<div class="footer-nav-list">
+						<div class="footer-nav">
+							<p class="text_uppercase" style="margin-bottom: 10px; color: #C0C0C0;">Business areas</p>
+							<ul>
+								<li class="footer-list">Product Photography</li>
+								<li class="footer-list">Architecture Photography</li>
+								<li class="footer-list">Drone Photography</li>
+								<li class="footer-list">Wildlife Photography</li>
+							</ul>	
+						</div>
+						<div class="footer-nav">
+							<p class="text_uppercase" style="margin-bottom: 10px; color: #C0C0C0;">Pages</p>
+							<ul>
+								<li class="footer-list">Gear cage</li>
+								<li class="footer-list">Featured images</li>
+								<li class="footer-list">Contact</li>
+								<li class="footer-list">Style guide</li>
+								<li class="footer-list">Instructions</li>
+								<li class="footer-list">Changelog</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div> <!-- footer-logo-nav -->
 
-			
-			<div class="footer-nav" style="right: 24%;">
-				<p class="text_uppercase" style="margin-bottom: 10px;">Business areas</p>
-				<ul>
-					<li class="footer-list">Product Photography</li>
-					<li class="footer-list">Architecture Photography</li>
-					<li class="footer-list">Drone Photography</li>
-					<li class="footer-list">Wildlife Photography</li>
-				</ul>	
-			</div>
-			<div class="footer-nav" style="right: 10%;">
-				<p class="text_uppercase" style="margin-bottom: 10px;">Pages</p>
-				<ul>
-					<li class="footer-list">Gear cage</li>
-					<li class="footer-list">Featured images</li>
-					<li class="footer-list">Contact</li>
-					<li class="footer-list">Style guide</li>
-					<li class="footer-list">Instructions</li>
-					<li class="footer-list">Changelog</li>
-				</ul>
-			</div>
+				<div class="rectangle" style=""></div>
 
-			<div class="rectangle" style=""></div>
-
-			<div class="subscribe">
-				<div class="subscribe-block" style="left: 136px;">
-					<p class="text_uppercase">Subscribe to our newsletter</p>
-					<p class="description_1 XS-size" style="width: 224px; height: 20px; margin-top: 2px;">Read about all the things we do.</p>
+				<div class="subscribe">
+					<div>
+						<p class="text_uppercase">Subscribe to our newsletter</p>
+						<p class="description_1 XS-size" style="width: 224px; height: 20px; margin-top: 20px;">Read about all the things we do.</p>
+					</div>
+					<div class="subscribe-block">
+						<input type="text" class="subscribe_input">
+						<input type="submit" class="subscribe_btn" value="Subscribe">
+					</div>
 				</div>
-				<div class="subscribe-block" style="right: 136px;">
-				<input type="text" class="subscribe_input">
-				<button class="subscribe_btn"></button>
+
+				<div class="rectangle-2"></div>
+
+			
+				<div class="footer-icons">
+
+					<div class="footer-icons-left">
+						<p style="color: #C0C0C0;">© Aperture Photography, Inc. All rights reserved.Licensing</p>
+					</div>
+
+					<div class="foot1er-icons-right">
+						<div class="icons"><img src="img/Twitter-Icon-Light.svg" alt="twitter"></div>
+						<div class="icons"><img src="img/Instagram-Icon-Light.svg" alt=""></div>
+						<div class="icons"><img src="img/fb.svg" alt=""></div>
+					</div>
+
 				</div>
 			</div>
-
-			<div class="rectangle" style="bottom: 180px;"></div>
-
-			
-			
-
-		
-			<div class="footer-icons" style="right: 136px;">
-				<p style="width: 72%;">© Aperture Photography, Inc. All rights reserved.Licensing</p>
-				<div class="icons"><img src="img/Twitter-Icon-Light.svg" alt="twitter"></div>
-				<div class="icons"><img src="img/Instagram-Icon-Light.svg" alt=""></div>
-				<div class="icons"><img src="img/fb.svg" alt=""></div>
-			</div>
 		
 			
-		</div>
+		</div> <!-- footer -->
 
 
 
@@ -236,7 +266,7 @@
 
 	</div>	<!-- wrapper -->
 	
-<!-- <script type="text/javascript" src="js/script.js"></script> -->
+<script type="text/javascript" src="js/script.js"></script>
 	
 </body>
 </html>
