@@ -5,7 +5,8 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
-	color: #fff
+	color: #fff;
+	box-sizing: border-box;
 }
 
 input, button {
@@ -119,7 +120,7 @@ body {
 	/*min-height: 100vh;*/
 	margin: auto;
 	/*outline: 2px solid red;*/
-	position: relative;
+	/*position: relative;*/
 }
 
 .wrapper > .block-1 {
@@ -130,6 +131,7 @@ body {
 
 
 .block-1 {
+	max-width: 1440px;
 	height: 716px;
 	background: linear-gradient(360deg, #000000 18.78%, rgba(0, 0, 0, 0) 98.53%), url('../img/beach.jpg');
 	background-size: cover;
@@ -137,16 +139,21 @@ body {
 	background-repeat: no-repeat;
 	/*background-attachment: fixed;*/
 	color: white;
-	position: relative;
+	/*position: relative;*/
 	/*outline: 2px solid yellow;*/
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .header {
-	position: absolute;
-	bottom: 15%;
-	left: 50%;
+	max-width: 600px;
+	/*position: absolute;*/
+	/*bottom: 15%;*/
+	/*left: 50%;*/
 	height: 100px;
-	transform: translate(-50%, -50%);
+	/*transform: translate(-50%, -50%);*/
 	/*margin-top: -50px;*/
 	text-align: center;
 }
@@ -164,7 +171,7 @@ h1 {
 }
 
 .description_1 {
-	width: 580px;
+	max-width: 580px;
 	height: 80px;
 	line-height: 20px;
 	color: #C0C0C0;
@@ -187,7 +194,7 @@ h1 {
   align-content: space-between;
   justify-content: space-between;*/
   /*padding: 40px 136px 100px ;*/
-  position: relative;
+  /*position: relative;*/
 }
 
 
@@ -198,14 +205,14 @@ h1 {
 	/*outline: 2px solid red;*/
 	text-align: center;
 	margin: 0 auto 40px;
-	padding-top: 120px;
+	/*padding-top: 120px;*/
 
 }
 
 .block-2-body {
 	/*outline: 2px solid blueviolet;*/
 	max-width: 1200px;
-	height: 1338px;
+	min-height: 1338px;
 	display: flex;
 	flex-wrap: wrap;
   justify-content: center;
@@ -262,12 +269,13 @@ h1 {
 }
 
 .block-icons {
-	position: absolute;
+	/*position: absolute;*/
 	height: 16px;
 	min-width: 295px;
 	/*outline: 2px solid red;*/
-	right: 40px;
-	bottom: 40px;
+	/*right: 40px;*/
+	/*bottom: 40px;*/
+	text-align: right;
 }
 
 .icons{
