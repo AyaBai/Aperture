@@ -7,3 +7,16 @@ function burgerMenu() {
 }
 
 
+function scrollById(id) {
+  let nav = document.getElementById(id);
+  let offsetTop = nav.offsetTop;
+  scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+
+  });
+
+  nav.click()
+
+  burgerMenu();
+}
