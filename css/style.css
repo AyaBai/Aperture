@@ -27,7 +27,7 @@ body {
 
 .top-line {
 	width: 100%;
-	height: 90px;
+	height: 69px;
 	top: 0;
 	left: 0;
 	position: fixed;
@@ -100,6 +100,11 @@ body {
 	position: relative;
 }
 
+.top_btn>a {
+	color: #000;
+	text-decoration: none;
+}
+
 .top_btn > img {
 	position: absolute;
 	top: 8%;
@@ -132,14 +137,14 @@ body {
 
 .block-1 {
 	max-width: 1440px;
-	height: 716px;
+	height: 100vh;
 	background: linear-gradient(360deg, #000000 18.78%, rgba(0, 0, 0, 0) 98.53%), url('../img/beach.jpg');
 	background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
 	/*background-attachment: fixed;*/
 	color: white;
-	/*position: relative;*/
+	position: relative;
 	/*outline: 2px solid yellow;*/
   display: flex;
 	flex-direction: column;
@@ -149,10 +154,10 @@ body {
 
 .header {
 	max-width: 600px;
-	/*position: absolute;*/
-	/*bottom: 15%;*/
+	position: absolute;
+	bottom: 100px;
 	/*left: 50%;*/
-	height: 100px;
+	/*height: 100px;*/
 	/*transform: translate(-50%, -50%);*/
 	/*margin-top: -50px;*/
 	text-align: center;
@@ -200,11 +205,11 @@ h1 {
 
 .block-2-head {
 	color: #fff;
-	width: 600px;
+	max-width: 600px;
 	height: 82px;
 	/*outline: 2px solid red;*/
 	text-align: center;
-	margin: 0 auto 40px;
+	margin: 120px auto 80px;
 	/*padding-top: 120px;*/
 
 }
@@ -240,7 +245,7 @@ h1 {
 
 .block-2-square {
 	height: 600px;
-	width: 516px;
+	width: 576px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-end;
@@ -249,6 +254,16 @@ h1 {
   padding: 0 30px;
   background-repeat: no-repeat;
 
+}
+
+.block2-text {
+	max-width: 516px;
+	max-height: 80px;
+	text-align: left;
+	color: #C0C0C0;
+	line-height: 20px;
+	margin-top: 19px;
+	margin-bottom: 15px;
 }
 
 
@@ -269,12 +284,12 @@ h1 {
 }
 
 .block-icons {
-	/*position: absolute;*/
-	height: 16px;
+	position: absolute;
+	min-height: 16px;
 	min-width: 295px;
 	/*outline: 2px solid red;*/
-	/*right: 40px;*/
-	/*bottom: 40px;*/
+	right: 40px;
+	bottom: 40px;
 	text-align: right;
 }
 
@@ -319,6 +334,10 @@ h1 {
 	right: 0;
 }
 
+.block-4-mobile {
+	display: none;
+}
+
 
 /*BLOCK-5*/
 
@@ -336,6 +355,8 @@ h1 {
 	top: 280px;
 	right: 12%;
 }
+
+
 
 /*BLOCK-6*/
 
@@ -391,7 +412,7 @@ h1 {
 }
 
 .block-8-text {
-	width: 600px;
+	max-width: 600px;
 	height: 186px;
 	text-align: center;
 }
@@ -469,6 +490,7 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	align-content: space-around;
 }
 
 /*.footer-nav {
@@ -486,6 +508,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 
@@ -494,8 +517,8 @@ h1 {
 	height: 52px;
 	border-radius: 12px;
 	color: #C0C0C0;
-	padding-left: 18px;
-	padding-right: 18px;
+	padding-left: 6px;
+	padding-right: 6px;
 	overflow: hidden;
 }
 
@@ -507,6 +530,7 @@ h1 {
 	cursor: pointer;
   color: #000;
   font-size: 8px;
+  margin-right: 6px;
 }
 
 .subscribe_btn:hover,
